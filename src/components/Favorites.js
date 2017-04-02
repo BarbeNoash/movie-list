@@ -9,14 +9,18 @@ class Favorite extends React.Component {
 	}
 
 	renderFavorite(key){
+		
 		const movie = this.props.movies[key];
 
-		console.log(movie);
-		// return (
-		// 	<li key={key}>
-		// 		<span>⭐ {movie.show_title}</span>
-		// 	</li>
-		// )
+		if(!movie){
+			return ;
+		}
+
+		return (
+			<li key={key}>
+				<span>⭐ {movie.show_title}</span>
+			</li>
+		)
 	}
 
 	render(){

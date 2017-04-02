@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './components/App';
-import Favorites from './components/Favorites';
 import NotFound from './components/NotFound';
 import './css/index.css';
 
@@ -12,7 +11,6 @@ const Root = () => {
 		<BrowserRouter>
 			<div>
 				<Match exactly pattern="/" component={App} />
-				<Match pattern="/favorites" component={Favorites} />
 				<Miss component={NotFound} />
 			</div>
 		</BrowserRouter>

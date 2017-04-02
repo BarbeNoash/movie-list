@@ -9,6 +9,7 @@ class Movie extends React.Component {
 		return(
 			<li className="movie-list">
 				<h3>{details.show_title}</h3>
+				<img src={details.poster} alt={details.show_title} />
 				<button disabled={isFavorite} onClick={() => this.props.addToFavorite(index)}>add favorite</button>
 			</li>
 		)
