@@ -30,7 +30,7 @@ class Favorite extends React.Component {
 		return (
 			<div className="favorite-column">
 				<h2>Favorite List</h2>
-				<ul>
+				<ul className="favorite-list">
 					{favoriteMovies.map(this.renderFavorite)}
 				</ul>
 			</div>

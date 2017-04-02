@@ -23,3 +23,18 @@ body {
 	width :25%;
 	display: inline-block;
 }
+
+.favorite-column {
+	position: fixed;
+    top: 50px;
+    right: 50px;
+    background-color: lightgrey;
+    padding: 10px 20px;
+}
+
+.favorite-list {
+	list-style-type : none;
+	text-align: left;
+	 padding-left: 10px;
+
+}
