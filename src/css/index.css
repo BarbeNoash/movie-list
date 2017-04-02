@@ -38,3 +38,11 @@ body {
 	 padding-left: 10px;
 
 }
+
+.invisible {
+	display: none;
+}
+
+.visible {
+	display: initial;
+}

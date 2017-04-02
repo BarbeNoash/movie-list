@@ -3,6 +3,7 @@ import '../css/App.css';
 import SampleMovies from '../sample-movies';
 
 import Header from './Header';
+import Menu from'./Menu';
 import Movie from './Movie';
 import Favorites from './Favorites';
 
@@ -15,10 +16,12 @@ class App extends Component {
 
   		this.loadMovie = this.loadMovie.bind(this);
   		this.addToFavorite =this.addToFavorite.bind(this);
+  		this.displayFavorite =this.displayFavorite.bind(this);
 
   		this.state = {
   			movies: {},
-  			favorites: {}
+  			favorites: {},
+  			displayFav: 'invisible'
   		}
   	}
 
@@ -58,18 +61,28 @@ class App extends Component {
   		this.setState(favorites);
   	}
 
+  	displayFavorite(){
+
+  		if (this.state.displayFav === 'visible'){
+            this.setState({displayFav: 'invisible'});
+        } else {
+            this.setState({displayFav: 'visible'});
+        }
+  	}
+
   render() {
     return (
       <div className="App">
         <Header />
-        <button onClick={this.loadMovie}>Voir les films</button>
+        <Menu displayFav={this.displayFavorite}/>
+        <button onClick={this.loadMovie}>Charger les films</button>
         <ul>
         	{Object
         		.keys(this.state.movies)
         		.map(key => <Movie key={key} index={key} details={this.state.movies[key]} addToFavorite={this.addToFavorite} />)
         	}
         </ul>
-        <Favorites movies={this.state.movies} favorites={this.state.favorites} />
+        <Favorites displayFav={this.state.displayFav} movies={this.state.movies} favorites={this.state.favorites} />
 
       </div>
     );

@@ -28,7 +28,7 @@ class Favorite extends React.Component {
 		const favoriteMovies = Object.keys(this.props.favorites);
 
 		return (
-			<div className="favorite-column">
+			<div className={`favorite-column ${this.props.displayFav}`} >
 				<h2>Favorite List</h2>
 				<ul className="favorite-list">
 					{favoriteMovies.map(this.renderFavorite)}
