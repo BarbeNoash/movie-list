@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Favorite to favorite list 1`] = `
+<li>
+  <span>
+    ⭐ "bonjour"
+  </span>
+</li>
+`;
+
