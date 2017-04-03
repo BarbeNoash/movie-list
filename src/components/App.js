@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/App.css';
+import '../css/style.css';
 import SampleMovies from '../sample-movies';
 
 import Header from './Header';
@@ -7,15 +7,18 @@ import Menu from'./Menu';
 import Movie from './Movie';
 import Favorites from './Favorites';
 
+import { Button, Col, Row } from 'react-bootstrap';
+
 import base from '../base'
 
 class App extends Component {
-  
+
 	constructor(){
   		super();
 
   		this.loadMovie = this.loadMovie.bind(this);
   		this.addToFavorite =this.addToFavorite.bind(this);
+      this.removeFromFavorite =this.removeFromFavorite.bind(this);
   		this.displayFavorite =this.displayFavorite.bind(this);
 
   		this.state = {
@@ -61,6 +64,12 @@ class App extends Component {
   		this.setState(favorites);
   	}
 
+    removeFromFavorite(key){
+      const favorites = this.state.favorites;
+      delete favorites[key];
+      this.setState(favorites);
+    }
+
   	displayFavorite(){
 
   		if (this.state.displayFav === 'visible'){
@@ -70,19 +79,26 @@ class App extends Component {
         }
   	}
 
+
   render() {
     return (
       <div className="App">
         <Header />
-        <Menu displayFav={this.displayFavorite}/>
-        <button onClick={this.loadMovie}>Charger les films</button>
-        <ul>
-        	{Object
-        		.keys(this.state.movies)
-        		.map(key => <Movie key={key} index={key} details={this.state.movies[key]} addToFavorite={this.addToFavorite} />)
-        	}
-        </ul>
-        <Favorites displayFav={this.state.displayFav} movies={this.state.movies} favorites={this.state.favorites} />
+        <Menu displayFavButton={this.displayFavorite}/>
+        <Button bsStyle="info" onClick={this.loadMovie}>Charger les films</Button>
+        <Row className="show-grid">
+          <Col xs={3} md={2}></Col>
+          <Col xs={12} md={8}>
+            <ul className="movies-container">
+              {Object
+                .keys(this.state.movies)
+                .map(key => <Movie key={key} index={key} details={this.state.movies[key]} addToFavorite={this.addToFavorite} removeFromFavorite={this.removeFromFavorite}/>)
+              }
+            </ul>
+          </Col>
+          <Col xs={3} md={2}></Col>
+        </Row>
+        <Favorites displayFav={this.state.displayFav} displayFavButton={this.displayFavorite} movies={this.state.movies} favorites={this.state.favorites} />
 
       </div>
     );

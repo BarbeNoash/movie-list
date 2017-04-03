@@ -9,7 +9,7 @@ class Favorite extends React.Component {
 	}
 
 	renderFavorite(key){
-		
+
 		const movie = this.props.movies[key];
 
 		if(!movie){
@@ -30,6 +30,7 @@ class Favorite extends React.Component {
 		return (
 			<div className={`favorite-column ${this.props.displayFav}`} >
 				<h2>Favorite List</h2>
+				<button onClick={this.props.displayFavButton} className="close">close</button>
 				<ul className="favorite-list">
 					{favoriteMovies.map(this.renderFavorite)}
 				</ul>

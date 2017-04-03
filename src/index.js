@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import App from './components/App';
 import NotFound from './components/NotFound';
-import './css/index.css';
+import './css/style.css';
 
 import { BrowserRouter, Match, Miss } from 'react-router';
 

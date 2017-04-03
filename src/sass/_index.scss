@@ -1,0 +1,97 @@
+@import "./_vars";
+
+.menu {
+	list-style-type : none;
+	padding:0px;
+
+	li {
+		display: inline-block;
+		padding: 10px 20px;
+	}
+
+	img {
+		width: 25px;
+    	vertical-align: text-bottom;
+	}
+
+	button {
+		font-family: 'haymakerregular', sans-serif;
+		font-size: 20px;
+	}
+}
+
+.movies-container{
+	padding : 20px 0px;
+}
+
+.movie-list {
+	margin: 10px auto;
+	background-color: white;
+	list-style-type : none;
+	width :90%;
+	display: block;
+	vertical-align: top;
+	text-align: center;
+
+	.poster{
+		height: 500px;
+		overflow: hidden;
+	}
+
+	button {
+		margin: 10px;
+	}
+
+	img {
+		width : 100%;
+	}
+}
+
+.favorite-column {
+	position: fixed;
+    top: 50px;
+    right: 0px;
+    background-color: white;
+    padding: 10px 20px;
+    width: 250px;
+
+    h2{
+    	font-size: 2rem;
+    	text-align: left;
+    }
+
+    .close {
+    	position:absolute;
+    	font-size: 2rem;
+    	right: 5px;
+    	top: 10px;
+    }
+}
+
+.favorite-list {
+	list-style-type : none;
+	text-align: left;
+	padding-left: 10px;
+
+}
+
+.invisible {
+	display: none;
+}
+
+.visible {
+	display: initial;
+}
+
+@media screen and (min-width: $break-palm){
+	.movie-list {
+		display:inline-block;
+		width: 25%;
+		margin: 10px;
+
+		.poster{
+			height: 280px;
+
+		}
+	}
+}

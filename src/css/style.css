@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "haymakerregular";
+  src: url("./fonts/haymaker-webfont.eot");
+  src: url("./fonts/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/haymaker-webfont.woff") format("woff"), url("./fonts/haymaker-webfont.ttf") format("truetype"), url("./fonts/haymaker-webfont.svg#haymakerregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'blanchcaps_inline';
+  src: url("./fonts/blanch_caps_inline-webfont.eot");
+  src: url("./fonts/blanch_caps_inline-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/blanch_caps_inline-webfont.woff") format("woff"), url("./fonts/blanch_caps_inline-webfont.ttf") format("truetype"), url("./fonts/blanch_caps_inline-webfont.svg#blanchcaps_inline") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.menu {
+  list-style-type: none;
+  padding: 0px; }
+  .menu li {
+    display: inline-block;
+    padding: 10px 20px; }
+  .menu img {
+    width: 25px;
+    vertical-align: text-bottom; }
+  .menu button {
+    font-family: 'haymakerregular', sans-serif;
+    font-size: 20px; }
+
+.movies-container {
+  padding: 20px 0px; }
+
+.movie-list {
+  margin: 10px auto;
+  background-color: white;
+  list-style-type: none;
+  width: 90%;
+  display: block;
+  vertical-align: top;
+  text-align: center; }
+  .movie-list .poster {
+    height: 500px;
+    overflow: hidden; }
+  .movie-list button {
+    margin: 10px; }
+  .movie-list img {
+    width: 100%; }
+
+.favorite-column {
+  position: fixed;
+  top: 50px;
+  right: 0px;
+  background-color: white;
+  padding: 10px 20px;
+  width: 250px; }
+  .favorite-column h2 {
+    font-size: 2rem;
+    text-align: left; }
+  .favorite-column .close {
+    position: absolute;
+    font-size: 2rem;
+    right: 5px;
+    top: 10px; }
+
+.favorite-list {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 10px; }
+
+.invisible {
+  display: none; }
+
+.visible {
+  display: initial; }
+
+@media screen and (min-width: 767px) {
+  .movie-list {
+    display: inline-block;
+    width: 25%;
+    margin: 10px; }
+    .movie-list .poster {
+      height: 280px; } }
+.App {
+  text-align: center; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+.App-header, h1 {
+  font-family: "haymakerregular";
+  background-color: #222;
+  padding: 10px;
+  color: white; }
+
+.App-intro {
+  font-size: large; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+body {
+  background: #D4D4D4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem; }
+
+h1 {
+  font-family: 'blanchcaps_inline', sans-serif;
+  font-size: 10rem;
+  text-align: center;
+  font-weight: normal;
+  margin: 0; }
+
+h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: 'haymakerregular', sans-serif; }
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem; }
+
+h3 {
+  font-size: 2rem; }
+
+/*# sourceMappingURL=style.css.map */
